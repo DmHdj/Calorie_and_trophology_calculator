@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Калькулятор калорий и трофологического статуса</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header_wrapper">
+                <h1 class="main_title">Данный калькулятор поможет рассчитать энергетические потребности организма и трофологический статус</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="tabtoggler_wrapper">
+                <div class="tabtoggler_item">КБЖУ</div>
+                <div class="tabtoggler_item">Трофологический статус</div>
+            </div>
+            <article class="pfc">
+                <div class="pfc_wrapper">
+                    <h2 class="pfc_title title">Расчет белков, жиров и углеводов</h2>
+                     <p class="pfc_descr descr">
+                        Величину основного обмена можно оценивать различными методами. Самые точные, которые могут учесть все ранее перечисленные факторы — это замеры, сделанные в лабораторных условиях методами прямой, непрямой или респираторной калориметрии. Сделать это при желании можно в клинике при научно-исследовательском институте питания. 
+                        В быту же обычно используют специализированные формулы для расчета.
+                        Уравнение MifflinStJeor - считается самым точным:
+                        <span class="pfc_descr_men">
+                            Мужчины = <var>(10 * W) + (6,25 * H) - (5 * А) + 5</var>
+                        </span>
+                        <span class="pfc_descr_women">
+                            Женщины = <var>(10 * W) + (6,25 * H) - (5 * A) – 161,</var>
+                        </span>
+                        <span class="pfc_descr_var">
+                            где <var>W</var>  = вес в кг, <var>H</var> = рост в сантиметрах, <var>А</var> = возраст в годах
+                        </span> 
+                    </p>
+                    <h2 class="title">Калькулятор белков, жиров и углеводов онлайн</h2>
+                    <form action="#" class="pfc_calc calc">
+                        <div class="pfc_calc_gender gender">
+                            <label for="pfc_male">Мужчина
+                                <input data-gender="pfc" type="radio" name="gender" id="pfc_male" value="male">
+                            </label>
+                            <label for="pfc_female">Женщина
+                                <input data-gender="pfc" type="radio" name="gender" id="pfc_female" value="female" checked>
+                            </label>
+                        </div>
+                
+                        <div class="pfc_calc_characteristics characteristics">
+                            <label for="pfc_height" >Рост
+                                <input type="text" placeholder="Рост (в сантиметрах)" name="height" id="pfc_height" required>
+                            </label>
+
+                            <label for="pfc_weight">Вес
+                                <input type="text" placeholder="Вес (в килограммах)" name="weight" id="pfc_weight" required>
+                            </label>
+
+                            <label for="pfc_age">Возраст
+                                <input type="text" placeholder="Возраст" name="age" id="pfc_age" required>
+                            </label>
+                        </div>
+                        
+                        <div class="pfc_calc_btns btns">
+                            <input type="reset" value="Убрать все данные">
+                            <input type="submit" value="Рассчитать" id="calculate">
+                        </div>
+                    </form>
+                    <ul class="pfc_result">
+                        <li class="pfc_result_item">Белки</li>
+                        <li class="pfc_result_item">Жиры</li>
+                        <li class="pfc_result_item">Уклеводы</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="trophological">
+                <div class="trophological_wrapper">
+                    <h2 class="trophological_title title">Определение трофологического статуса человека</h2>
+                    <p class="trophological_descr descr">
+                    Трофологический статус человека - это совокупность нормальных структурно-функциональных и метаболических взаимоотношений в организме, которые обусловлены конституцией, полом и возрастом. Эти взаимоотношения обеспечивают поддержание адекватного гоместаза и широких адаптационных резервов, которые зависят от предшествующего питания, условий жизни и возможных заболеваний. 
+                    </p>
+                    <form action="#" class="trophological_calc calc">
+                        <div class="trophological_calc_gender gender">
+                            <label for="trophological_male">Мужчина
+                                <input data-gender type="radio" name="gender" id="trophological_male" value="male">
+                            </label>
+                            <label for="trophological_female">Женщина
+                                <input data-gender type="radio" name="gender" id="trophological_female"  value="female" checked>
+                            </label>
+                        </div>
+                        
+                        <div class="trophological_calc_characteristics characteristics">
+                            <label for="trophological_height">Рост
+                                <input type="text" placeholder="Рост (в сантиметрах)" name="height" id="trophological_height" required>
+                            </label>
+
+                            <label for="trophological_weight">Вес
+                                <input type="text" placeholder="Вес (в килограммах)" name="weight" id="trophological_weight" required>
+                            </label>
+
+                            <label for="trophological_age">Возраст
+                                <input type="text" placeholder="Возраст" name="age" id="trophological_age" required>
+                            </label>
+
+                            <label for="trophological_belly">Окружность живота на уровне пупка
+                                <input type="text" placeholder="Окружность живота (в сантиметрах)" name="belly" id="trophological_belly" required>
+                            </label>
+
+                            <label for="trophological_neck">Окружность шеи на уровне средней трети
+                                <input type="text" placeholder="Окружность шеи (в сантиметрах)" name="neck" id="trophological_neck" required>
+                            </label>
+
+                            <!-- only woman -->
+                            <label data-biceps for="trophological_biceps">Окружность бицепса
+                                <input type="text" placeholder="Окружность бицепса (в сантиметрах)" name="biceps" id="trophological_biceps" required>
+                            </label>
+
+                            <label data-shoulder for="trophological_shoulder">Окружность плеча на уровне средней трети
+                                <input type="text" placeholder="Окружность плеча (в сантиметрах)" name="shoulder" id="trophological_shoulder" required>
+                            </label>
+
+                            <label data-thigh for="trophological_thigh">Окружность бедра на уровне ягодичной складки
+                                <input type="text" placeholder="Окружность бедра (в сантиметрах)" name="thigh" id="trophological_thigh" required>
+                            </label>
+                        </div>
+
+                        <div class="trophological_calc_btns btns">
+                            <input type="reset" value="Убрать все данные">
+                            <input type="submit" value="Рассчитать">
+                        </div>
+                    </form>
+                    <ul class="trophological_result">
+                        <li class="trophological_result_item">Индекс массы тела</li>
+                        <li class="trophological_result_item">Рекомендуемая масса тела</li>
+                        <li class="trophological_result_item">Отклонение фактической массы тела от рекомендуемой</li>
+                        <li class="trophological_result_item">Процент жира</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
