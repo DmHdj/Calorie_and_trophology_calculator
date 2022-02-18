@@ -38,7 +38,7 @@
                             где <var>W</var>  = вес в кг, <var>H</var> = рост в сантиметрах, <var>А</var> = возраст в годах
                         </span> 
                     </p>
-                    <h2 class="title">Калькулятор белков, жиров и углеводов онлайн</h2>
+                    <h2 class="title">Калькулятор калорий, белков, жиров и углеводов онлайн</h2>
                     <form action="#" class="pfc_calc calc">
                         <div class="pfc_calc_gender gender">
                             <label for="pfc_male">Мужчина
@@ -65,13 +65,11 @@
                         
                         <div class="pfc_calc_btns btns">
                             <input type="reset" value="Убрать все данные">
-                            <input type="submit" value="Рассчитать" id="calculate">
+                            <input type="submit" value="Рассчитать" id="calculatePfc">
                         </div>
                     </form>
-                    <ul class="pfc_result">
-                        <li class="pfc_result_item">Белки</li>
-                        <li class="pfc_result_item">Жиры</li>
-                        <li class="pfc_result_item">Уклеводы</li>
+                    <ul class="pfc_result result">
+                        <li class="result_item"></li>
                     </ul>
                 </div>
             </article>
@@ -100,10 +98,6 @@
                                 <input type="text" placeholder="Вес (в килограммах)" name="weight" id="trophological_weight" required>
                             </label>
 
-                            <label for="trophological_age">Возраст
-                                <input type="text" placeholder="Возраст" name="age" id="trophological_age" required>
-                            </label>
-
                             <label for="trophological_belly">Окружность живота на уровне пупка
                                 <input type="text" placeholder="Окружность живота (в сантиметрах)" name="belly" id="trophological_belly" required>
                             </label>
@@ -128,17 +122,26 @@
 
                         <div class="trophological_calc_btns btns">
                             <input type="reset" value="Убрать все данные">
-                            <input type="submit" value="Рассчитать">
+                            <input type="submit" value="Рассчитать" id="calculateTroph">
                         </div>
                     </form>
-                    <ul class="trophological_result">
-                        <li class="trophological_result_item">Индекс массы тела</li>
-                        <li class="trophological_result_item">Рекомендуемая масса тела</li>
-                        <li class="trophological_result_item">Отклонение фактической массы тела от рекомендуемой</li>
-                        <li class="trophological_result_item">Процент жира</li>
+                    <ul class="trophological_result result">
+                        <li class="result_item"></li>
                     </ul>
                 </div>
             </article>
+        </div>
+
+        <div class="modal">
+            <div class="modal_dialog">
+                <div class="modal_content">
+                    <div data-close class="modal_close">&times;</div>
+                    <div class="modal_text">
+                        Неправильно введены значения! <br>
+                        Введите в поля цифровые значения.
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="js/script.js"></script>
