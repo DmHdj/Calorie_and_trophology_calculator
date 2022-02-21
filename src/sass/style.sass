@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6
 /*--------------------*/
 
 .container 
-    max-width: 1140px
+    max-width: 1330px
     padding: 0 15px
     margin: 0 auto
 
@@ -229,3 +229,46 @@ header, main
 .hide
 	display: none
 
+@media (max-width: 1400px) 
+	.container
+		max-width: 1140px
+
+@media (max-width: 1200px) 
+	.container 
+		max-width: 960px
+
+@media (max-width: 992px) 
+	.container 
+		max-width: 720px
+		.header_wrapper 
+			padding: 30px 35px 0 35px
+
+@media (max-width: 768px) 
+	.container 
+		max-width: 540px
+		.calc
+			width: 100%
+		.header_wrapper
+			padding: 20px 25px 0 25px
+			.main_title
+				font-size: 1.5rem
+		.tabtoggler_wrapper
+			padding: 25px
+			.tabtoggler_item
+				font-size: 1.0rem
+				&:hover
+					background-color: #5C5C5C
+
+@media (max-width: 576px) 
+	.container 
+		max-width: none	
+		.header_wrapper
+			padding-bottom: 15px
+		.tabtoggler_wrapper
+			padding: 5px
+			.tabtoggler_item
+				width: 50%
+				font-size: 0.9rem
+		.calc .btns input
+			padding: 10px 5px
+		
